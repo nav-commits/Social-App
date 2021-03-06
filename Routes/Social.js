@@ -43,7 +43,7 @@ router.get('/:id', async(req,res)=>{
 });
 
 
-// delete alll socialposts
+// delete all socialposts
 router.delete('/', async(req,res)=>{
     try {
         const deletesocialposts = await Social.remove();
