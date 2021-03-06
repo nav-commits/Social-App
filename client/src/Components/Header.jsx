@@ -1,8 +1,8 @@
-import '../App.css';
+import "../Styles/App.css";
 
 function Header() {
   return (
-    <div>
+    <div className="main-header">
         <h1>SocialPosts365</h1>
     </div>
   );
