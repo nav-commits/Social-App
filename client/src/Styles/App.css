@@ -1,4 +1,18 @@
-
-.main-header{
-    color:red;
+.header-wrapper{
+    background-color: rgb(99, 81, 81);
+    height: 250px;
 }
+.header{
+    color:grey;
+    text-align: center;
+    padding-top: 60px;
+
+}
+
+body{
+    margin-left: 0;
+    margin-right: 0;
+    margin:0;
+    padding: 0;
+}
+

@@ -2,9 +2,12 @@ import "../Styles/App.css";
 
 function Header() {
   return (
-    <div className="main-header">
-        <h1>SocialPosts365</h1>
-    </div>
+  <div className="header-wrapper">
+        <div>
+           <h1 className="header">TheSocialPosts 365</h1>
+        </div>
+        
+</div>
   );
 }
 
