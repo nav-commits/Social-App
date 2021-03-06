@@ -5,6 +5,8 @@ const bodyParser = require ("body-parser");
 const Port = 3000;
 const social = require("./Routes/Social.js");
 require('dotenv').config();
+
+
 // MIDDLEWARE FOR PARSING
 app.use(bodyParser.json());
 app.use('/Social',social)
