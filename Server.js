@@ -2,7 +2,7 @@ const express = require ("express");
 const app = express();
 const mongoose = require ("mongoose");
 const bodyParser = require ("body-parser");
-const Port = 3000;
+const Port = 5000;
 const social = require("./Routes/Social.js");
 require('dotenv').config();
 
