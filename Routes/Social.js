@@ -19,7 +19,9 @@ router.get('/', async (req,res)=>{
 router.post('/',(req,res)=>{
     const socials = new Social ({
         title: req.body.title,
-        message:req.body.message
+        message:req.body.message,
+        creater: req.body.creater,
+        selectedFile: req.body.selectedFile,
     });
     socials.save()
     .then((data)=>{
