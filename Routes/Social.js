@@ -14,7 +14,6 @@ router.get('/', async (req,res)=>{
     
 });
 
-
 // creating a socialpost
 router.post('/',(req,res)=>{
     const socials = new Social ({
