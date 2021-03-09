@@ -1,28 +1,30 @@
 // import React, {createContext} from 'react';
-import React,{useState, useEffect, createContext} from 'react';
+import React,{useState, createContext} from 'react';
 import axios from "axios";
 
-export const postContext = creatContext();
+export const PostContext = createContext();
 
-const postContextProvider = (props) =>{
-    const [title, setTitle] = useState('');
-    const [message, setMessage] = useState('');
-    const [creater, setCreater] = useState('');
-    const [selectedFile, setselectedFile] = useState('');
+const PostContextProvider = (props) =>{
+    const [form, setForm] = useState({
+        title : '', 
+        message: '', 
+        creater: '', 
+        selectedFile:''
+    });
+ 
 
-  useEffect(()=>{
-      sendPosts();
-  },[])
-   
-  const sendPosts = () =>{
-      axios.post()
-  }
+      axios.post('http://localhost:5000/Socials',form)
+      .then((response)=>{
+        console.log(response)
+      })
+
+    
 
     return (
-       <postContext.Provider value={}>
+       <PostContext.Provider value={form,setForm}>
          {props.children}
-       </postContext.Provider>
+       </PostContext.Provider>
 
     );
 };
- export default postContextProvider;
+ export default PostContextProvider;
