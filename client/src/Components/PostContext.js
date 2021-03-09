@@ -1,5 +1,5 @@
-import React, {createContext} from 'react';
-import React, {useState} from 'react';
+// import React, {createContext} from 'react';
+import React,{useState, useEffect, createContext} from 'react';
 import axios from "axios";
 
 export const postContext = creatContext();
@@ -10,9 +10,14 @@ const postContextProvider = (props) =>{
     const [creater, setCreater] = useState('');
     const [selectedFile, setselectedFile] = useState('');
 
-    // send post data
+  useEffect(()=>{
+      sendPosts();
+  },[])
+   
+  const sendPosts = () =>{
+      axios.post()
+  }
 
-    
     return (
        <postContext.Provider value={}>
          {props.children}

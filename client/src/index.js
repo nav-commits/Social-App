@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './Components/App';
-import  postContextProvider from "./PostContext.js";
+import postContextProvider from "./Components/PostContext.js";
 
 ReactDOM.render(
   <React.StrictMode>
