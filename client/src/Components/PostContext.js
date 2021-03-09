@@ -11,7 +11,7 @@ const PostContextProvider = (props) =>{
     });
  
     // 'http://localhost:5000/Social'
-      axios.post('https://jsonplaceholder.typicode.com/todos',form)
+      axios.post('http://localhost:5000/Social',form)
       .then((response)=>{
         console.log(response)
       })
