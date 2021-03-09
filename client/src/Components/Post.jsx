@@ -5,8 +5,6 @@ import axios from "axios";
 
 function Post() {
 const {form,setForm}= useContext(PostContext);
-console.log(form,setForm);
-
 
 const handleSubmit = (event) =>{
     
@@ -23,10 +21,9 @@ axios.post('/Social',form)
   return (
     <div>
         <form onSubmit={handleSubmit}>
-           <input type="text" value={FormData} onChange={e => setForm(e.target.value)}/>
-           <input type="text"/>
-           <input type="text"/>
-           <input type="text"/>
+           <input type="text" value={form.title}   onChange={e => setForm({ title:e.target.value})}/>
+           <input type="text" value={form.message} onChange={e => setForm({ message: e.target.value})}/>
+           <input type="text" value={form.creater} onChange={e => setForm({ creater:e.target.value})}/>
            <button>Submit</button>
         </form>
       
