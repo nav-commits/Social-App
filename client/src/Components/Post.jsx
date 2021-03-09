@@ -19,6 +19,10 @@ axios.post('/Social',form)
   })
   
 }
+const newformData = Object.values(form);
+const postedData = newformData.map((newform)=>{
+  return <h1 key={newform.id}>{newform.title}</h1>
+});
 
   return (
     <div>
@@ -29,6 +33,9 @@ axios.post('/Social',form)
            <button>Submit</button>
         </form>
         
+        <div>
+          {postedData}
+        </div>
     </div>
   );
 }

@@ -7,8 +7,8 @@ const PostContextProvider = (props) =>{
         title : '', 
         message: '', 
         creater: '', 
-
-    });
+    
+  });
  
 
     return (
