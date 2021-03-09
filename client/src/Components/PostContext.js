@@ -7,10 +7,8 @@ const PostContextProvider = (props) =>{
         title : '', 
         message: '', 
         creater: '', 
-        selectedFile:''
     });
  
-
 
     return (
        <PostContext.Provider value={{form,setForm}}>

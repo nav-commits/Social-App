@@ -1,17 +1,18 @@
-import React, {useContext} from 'react';
+import {useContext} from 'react';
 import "../Styles/App.css";
 import {PostContext} from './PostContext';
 import axios from "axios";
 
 function Post() {
-const {form,setForm}= useContext(PostContext);
-
+const {form,setForm} = useContext(PostContext);
 const handleSubmit = (event) =>{
-    
-event.preventDeafult();
+event.preventDefault();
+
 axios.post('/Social',form)
   .then((response)=>{
   console.log(response)
+  console.log(form);
+
   })
   .catch((error)=>{
   console.log(error);
@@ -21,12 +22,11 @@ axios.post('/Social',form)
   return (
     <div>
         <form onSubmit={handleSubmit}>
-           <input type="text" value={form.title}   onChange={e => setForm({ title:e.target.value})}/>
-           <input type="text" value={form.message} onChange={e => setForm({ message: e.target.value})}/>
-           <input type="text" value={form.creater} onChange={e => setForm({ creater:e.target.value})}/>
+           <input type="text" value={form.title} onChange={e => setForm({...form,title:e.target.value})}/>
+           <input type="text" value={form.message} onChange={e => setForm({...form,message: e.target.value})}/>
+           <input type="text" value={form.creater} onChange={e => setForm({...form,creater:e.target.value})}/>
            <button>Submit</button>
         </form>
-      
     </div>
   );
 }

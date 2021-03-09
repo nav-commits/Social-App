@@ -20,7 +20,6 @@ router.post('/',(req,res)=>{
         title: req.body.title,
         message:req.body.message,
         creater: req.body.creater,
-        selectedFile: req.body.selectedFile,
     });
     socials.save()
     .then((data)=>{
@@ -76,7 +75,7 @@ router.patch('/:id',async(req,res)=>{
         {$set:{title: req.body.title, 
         message: req.body.message ,
         creater:req.body.creater, 
-        selectedFile:req.body.selectedFile }});
+        }});
         res.json(updatesocialPost);
     }
     catch(err){

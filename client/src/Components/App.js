@@ -5,7 +5,6 @@ import Post from "../Components/Post.jsx"
 
 
 function App() {
-
   return (
     <div>
        <Header/>
