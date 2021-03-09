@@ -1,5 +1,4 @@
 import React,{useState, createContext} from 'react';
-import axios from "axios";
 
 export const PostContext = createContext();
 
@@ -11,15 +10,7 @@ const PostContextProvider = (props) =>{
         selectedFile:''
     });
  
-      axios.post('/Social',form)
-      .then((response)=>{
-        console.log(response)
-      })
-      .catch((error)=>{
-        console.log(error);
-      })
 
-    
 
     return (
        <PostContext.Provider value={{form,setForm}}>
