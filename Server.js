@@ -5,11 +5,14 @@ const bodyParser = require ("body-parser");
 const Port = 5000;
 const social = require("./Routes/Social.js");
 require('dotenv').config();
+const cors = require('cors')
 
 
 // MIDDLEWARE FOR PARSING
 app.use(bodyParser.json());
 app.use('/Social',social)
+
+app.use(cors())
 
 // Database connection
 mongoose.connect(`${process.env.DBCONNECTION}`,

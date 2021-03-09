@@ -1,7 +1,5 @@
-// import React, {createContext} from 'react';
 import React,{useState, createContext} from 'react';
 import axios from "axios";
-
 export const PostContext = createContext();
 
 const PostContextProvider = (props) =>{
@@ -12,10 +10,13 @@ const PostContextProvider = (props) =>{
         selectedFile:''
     });
  
-
-      axios.post('http://localhost:5000/Socials',form)
+    // 'http://localhost:5000/Social'
+      axios.post('https://jsonplaceholder.typicode.com/todos',form)
       .then((response)=>{
         console.log(response)
+      })
+      .catch((error)=>{
+        console.log(error);
       })
 
     

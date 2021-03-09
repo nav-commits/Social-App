@@ -1,10 +1,11 @@
-import Header from "../Components/Header";
+import React,{useContext} from 'react';
 import "../Styles/App.css";
+import PostContext from './PostContext';
 
 function Post() {
+const postingData = useContext(PostContext);
+console.log(postingData);
 
-
-    
   return (
     <div>
         <form>

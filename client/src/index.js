@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './Components/App';
-import postContextProvider from "./Components/PostContext.js";
+import PostContextProvider from "./Components/PostContext.js";
 
 ReactDOM.render(
   <React.StrictMode>
-      <postContextProvider>
+      <PostContextProvider>
            <App />
-      </postContextProvider>
+      </PostContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
