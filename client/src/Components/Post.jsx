@@ -19,6 +19,7 @@ axios.post('/Social',form)
   })
   
 }
+
   return (
     <div>
         <form onSubmit={handleSubmit}>
@@ -27,6 +28,7 @@ axios.post('/Social',form)
            <input type="text" value={form.creater} onChange={e => setForm({...form,creater:e.target.value})}/>
            <button>Submit</button>
         </form>
+        
     </div>
   );
 }
