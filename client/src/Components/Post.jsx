@@ -9,6 +9,7 @@ console.log(form,setForm);
 
 
 const handleSubmit = (event) =>{
+    
 event.preventDeafult();
 axios.post('/Social',form)
   .then((response)=>{
@@ -17,12 +18,12 @@ axios.post('/Social',form)
   .catch((error)=>{
   console.log(error);
   })
-
+  
 }
   return (
     <div>
         <form onSubmit={handleSubmit}>
-           <input type="text"/>
+           <input type="text" value={FormData} onChange={e => setForm(e.target.value)}/>
            <input type="text"/>
            <input type="text"/>
            <input type="text"/>
