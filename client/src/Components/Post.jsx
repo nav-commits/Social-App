@@ -1,10 +1,11 @@
-import React,{useContext} from 'react';
+import { set } from 'mongoose';
+import {useContext} from 'react';
 import "../Styles/App.css";
 import PostContext from './PostContext';
 
 function Post() {
-const postingData = useContext(PostContext);
-console.log(postingData);
+const postData = useContext(PostContext);
+console.log(postData);
 
   return (
     <div>

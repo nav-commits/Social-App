@@ -10,8 +10,7 @@ const PostContextProvider = (props) =>{
         selectedFile:''
     });
  
-    // 'http://localhost:5000/Social'
-      axios.post('http://localhost:5000/Social',form)
+      axios.post('/Social',form)
       .then((response)=>{
         console.log(response)
       })
@@ -22,7 +21,7 @@ const PostContextProvider = (props) =>{
     
 
     return (
-       <PostContext.Provider value={form,setForm}>
+       <PostContext.Provider value={{form,setForm}}>
          {props.children}
        </PostContext.Provider>
 
