@@ -2,27 +2,37 @@ import {useContext} from 'react';
 import "../Styles/App.css";
 import {PostContext} from './PostContext';
 import axios from "axios";
+import {useState,useEffect} from 'react';
 
 function Post() {
 const {form,setForm} = useContext(PostContext);
+const [posts,setPosts] = useState([])
+
+useEffect(() => {
+    const url = '/Social';
+    axios.get(url)
+    .then(response =>{
+      setPosts(response.data)
+      console.log(response);
+    })
+    .catch(err =>{
+      console.log(err)
+    });
+   },[]);
+
+
 const handleSubmit = (event) =>{
 event.preventDefault();
-
 axios.post('/Social',form)
   .then((response)=>{
   console.log(response)
   console.log(form);
-
   })
   .catch((error)=>{
   console.log(error);
   })
   
 }
-const newformData = Object.values(form);
-const postedData = newformData.map((newform)=>{
-  return <h1 key={newform.id}>{newform.title}</h1>
-});
 
   return (
     <div>
@@ -33,8 +43,14 @@ const postedData = newformData.map((newform)=>{
            <button>Submit</button>
         </form>
         
-        <div>
-          {postedData}
+         <div className="Posts">
+            {posts && posts.map(newposts=>{
+              return <div key={newposts}>
+                         <h1>{newposts.title}</h1>
+                         <p>{newposts.message}</p>
+                         <p>{newposts.creater}</p>
+                    </div>
+            })}
         </div>
     </div>
   );

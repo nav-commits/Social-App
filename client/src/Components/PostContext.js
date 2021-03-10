@@ -3,12 +3,12 @@ import React,{useState, createContext} from 'react';
 export const PostContext = createContext();
 
 const PostContextProvider = (props) =>{
-    const [form, setForm] = useState({
-        title : '', 
+    const [form, setForm] = useState(
+       { title : '', 
         message: '', 
         creater: '', 
-    
-  });
+       }
+      );
  
 
     return (
