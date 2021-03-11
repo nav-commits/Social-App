@@ -25,7 +25,6 @@ const fetchPosts = () =>{
 
 const HandleSubmit = (event) =>{
 event.preventDefault();
-event.target.reset();
 axios.post('/Social',form)
   .then((response)=>{
   console.log(response)
@@ -34,22 +33,23 @@ axios.post('/Social',form)
   .catch((error)=>{
   console.log(error);
   })
+   event.target.reset();
     fetchPosts();
 }
 
   return (
     <div>
         <form onSubmit={HandleSubmit}>
-           <input type="text" value={form.title} onChange={e => setForm({...form,title:e.target.value})}/>
-           <input type="text" value={form.message} onChange={e => setForm({...form,message: e.target.value})}/>
-           <input type="text" value={form.creater} onChange={e => setForm({...form,creater:e.target.value})}/>
+           <input type="text" placeholder="title" value={form.title} onChange={e => setForm({...form,title:e.target.value})}/>
+           <input type="text" placeholder="message" value={form.message} onChange={e => setForm({...form,message: e.target.value})}/>
+           <input type="text" placeholder="creater" value={form.creater} onChange={e => setForm({...form,creater:e.target.value})}/>
            <button>Submit</button>
         </form>
         
          <div className="Cards">
             {posts && posts.map(formPosts=>{
               return <div className="Card-Posts" key={formPosts.id}>
-                         <h1>Title: {formPosts.title}</h1>
+                         <h1>Title:  {formPosts.title}</h1>
                          <p>Message: {formPosts.message}</p>
                          <p>Creater: {formPosts.creater}</p>
                          <p>Posted: {moment(formPosts.createdAt).fromNow()}</p>
