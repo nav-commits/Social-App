@@ -1,3 +1,4 @@
+
 .header-wrapper{
     background-color: rgb(99, 81, 81);
     height: 250px;
@@ -14,6 +15,24 @@ body{
     padding: 0;
 }
 
-.Posts{
-    text-align: center;
+
+
+
+.Card-Posts{
+margin-top: 150px;
+border: 2px solid #e7e7e7;
+border-radius: 4px;
+width: 80%;
+padding: .5rem;
+text-align: center;
+}
+
+.Cards{
+margin-top: 40px;
+margin-left: 20px;
+padding-top: 10px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-auto-rows: auto;
+grid-gap: 0.2rem;
 }

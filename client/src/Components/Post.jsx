@@ -46,9 +46,9 @@ axios.post('/Social',form)
            <button>Submit</button>
         </form>
         
-         <div className="Posts">
+         <div className="Cards">
             {posts && posts.map(formPosts=>{
-              return <div key={formPosts}>
+              return <div className="Card-Posts" key={formPosts.id}>
                          <h1>{formPosts.title}</h1>
                          <p>{formPosts.message}</p>
                          <p>{formPosts.creater}</p>
