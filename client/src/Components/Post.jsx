@@ -2,7 +2,7 @@ import {useContext,useState,useEffect} from 'react';
 import "../Styles/App.css";
 import {PostContext} from './PostContext';
 import axios from "axios";
-
+import moment from 'moment';
 function Post() {
 const {form,setForm} = useContext(PostContext);
 const [posts,setPosts] = useState([])
@@ -49,9 +49,10 @@ axios.post('/Social',form)
          <div className="Cards">
             {posts && posts.map(formPosts=>{
               return <div className="Card-Posts" key={formPosts.id}>
-                         <h1>{formPosts.title}</h1>
-                         <p>{formPosts.message}</p>
-                         <p>{formPosts.creater}</p>
+                         <h1>Title: {formPosts.title}</h1>
+                         <p>Message: {formPosts.message}</p>
+                         <p>Creater: {formPosts.creater}</p>
+                         <p>Posted: {moment(formPosts.createdAt).fromNow()}</p>
                     </div>
             })}
         </div>
