@@ -1,4 +1,4 @@
-import {useContext,useState} from 'react';
+import {useContext,useState,useEffect} from 'react';
 import "../Styles/App.css";
 import {PostContext} from './PostContext';
 import axios from "axios";
@@ -18,9 +18,14 @@ const fetchPosts = () =>{
       console.log(err)
     });
   }
+  useEffect(() => {
+  fetchPosts();
+  },[]);
+
 
 const HandleSubmit = (event) =>{
 event.preventDefault();
+event.target.reset();
 axios.post('/Social',form)
   .then((response)=>{
   console.log(response)
@@ -30,7 +35,6 @@ axios.post('/Social',form)
   console.log(error);
   })
     fetchPosts();
-  
 }
 
   return (
