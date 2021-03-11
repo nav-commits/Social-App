@@ -29,6 +29,7 @@ axios.post('/Social',form)
   .then((response)=>{
   console.log(response)
   console.log(form);
+  setForm('');
   })
   .catch((error)=>{
   console.log(error);
