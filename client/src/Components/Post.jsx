@@ -19,8 +19,7 @@ const fetchPosts = () =>{
     });
   }
 
-const handleSubmit = (event) =>{
-fetchPosts();
+const HandleSubmit = (event) =>{
 event.preventDefault();
 axios.post('/Social',form)
   .then((response)=>{
@@ -30,11 +29,13 @@ axios.post('/Social',form)
   .catch((error)=>{
   console.log(error);
   })
+    fetchPosts();
   
 }
+
   return (
     <div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={HandleSubmit}>
            <input type="text" value={form.title} onChange={e => setForm({...form,title:e.target.value})}/>
            <input type="text" value={form.message} onChange={e => setForm({...form,message: e.target.value})}/>
            <input type="text" value={form.creater} onChange={e => setForm({...form,creater:e.target.value})}/>
