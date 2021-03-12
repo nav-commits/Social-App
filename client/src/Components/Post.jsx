@@ -29,13 +29,15 @@ const deletePosts = (id)=>{
 axios.delete(`/Social/${id}`)
 .then(response=>{
   console.log(response);
-  const del = posts.filter(post => id !== post.id)
-  setPosts(del)
+  const newPosts = [...posts]
+  posts.splice(id, 1)
+  setPosts(newPosts)
 })
 .catch(error =>{
   console.log(error)
 })
 }
+
 
 const HandleSubmit = (event) =>{
 event.preventDefault();
@@ -68,7 +70,7 @@ axios.post('/Social',form)
                          <p>Message: {formPosts.message}</p>
                          <p>Creater: {formPosts.creater}</p>
                          <p>Posted: {moment(formPosts.createdAt).fromNow()}</p>
-                        <FontAwesomeIcon  onClick={(id) => deletePosts(id)} className="Trash" icon={faTrashAlt} />
+                        <FontAwesomeIcon  onClick={()=>deletePosts(formPosts._id)} className="Trash" icon={faTrashAlt} />
                     </div>
             })}
         </div>
