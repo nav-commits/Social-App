@@ -10,6 +10,10 @@ function Post() {
 const {form,setForm} = useContext(PostContext);
 const [posts,setPosts] = useState([])
 
+useEffect(() => {
+  fetchPosts();
+  },[]);
+
 const fetchPosts = () =>{
     const url = '/Social';
     axios.get(url)
@@ -20,10 +24,7 @@ const fetchPosts = () =>{
       console.log(err)
     });
   }
-  useEffect(() => {
-  fetchPosts();
-  },[]);
-
+ 
 const deletePosts = (id)=>{
 axios.delete(`/Social/${id}`)
 .then(response=>{
