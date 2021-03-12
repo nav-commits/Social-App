@@ -3,6 +3,9 @@ import "../Styles/App.css";
 import {PostContext} from './PostContext';
 import axios from "axios";
 import moment from 'moment';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 function Post() {
 const {form,setForm} = useContext(PostContext);
 const [posts,setPosts] = useState([])
@@ -54,6 +57,7 @@ axios.post('/Social',form)
                          <p>Message: {formPosts.message}</p>
                          <p>Creater: {formPosts.creater}</p>
                          <p>Posted: {moment(formPosts.createdAt).fromNow()}</p>
+                        <FontAwesomeIcon className="Trash" icon={faTrashAlt} />
                     </div>
             })}
         </div>
