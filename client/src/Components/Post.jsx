@@ -15,7 +15,6 @@ const fetchPosts = () =>{
     axios.get(url)
     .then(response =>{
       setPosts(response.data)
-      console.log(response);
     })
     .catch(err =>{
       console.log(err)
@@ -28,14 +27,15 @@ const fetchPosts = () =>{
 const deletePosts = (id)=>{
 axios.delete(`/Social/${id}`)
 .then(response=>{
-  console.log(response);
+  console.log(response)
   const newPosts = [...posts]
-  posts.splice(id, 1)
+  newPosts.splice(id, 1)
   setPosts(newPosts)
 })
 .catch(error =>{
   console.log(error)
 })
+
 }
 
 
