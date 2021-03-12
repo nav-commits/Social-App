@@ -56,7 +56,7 @@ axios.post('/Social',form)
     <div>
         <form className="Form" onSubmit={HandleSubmit}>
            <input type="text" placeholder="Title" value={form.title} onChange={e => setForm({...form,title:e.target.value})}/>
-           <textarea type="text" placeholder="Message" value={form.message} onChange={e => setForm({...form,message: e.target.value})}/>
+           <input type="text" placeholder="Message" value={form.message} onChange={e => setForm({...form,message: e.target.value})}/>
            <input type="text" placeholder="Creater" value={form.creater} onChange={e => setForm({...form,creater:e.target.value})}/>
            <button className="Submit">Submit</button>
         </form>
@@ -67,7 +67,7 @@ axios.post('/Social',form)
                          <h1>Title:  {formPosts.title}</h1>
                          <p>Message: {formPosts.message}</p>
                          <p>Creater: {formPosts.creater}</p>
-                         <p>Posted: {moment(formPosts.createdAt).fromNow()}</p>
+                         <p>Posted: {moment(formPosts.createdAt).format('LLLL')}</p>
                         <FontAwesomeIcon  onClick={()=>deletePosts(formPosts._id)} className="Trash" icon={faTrashAlt} />
                     </div>
             })}

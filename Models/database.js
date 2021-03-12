@@ -6,7 +6,7 @@ const socialSchema = mongoose.Schema({
    creater: String,
    createdAt:{
        type: Date,
-       default: new Date()
+       default: Date.now
    }
 
 });
