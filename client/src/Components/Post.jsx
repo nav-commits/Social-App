@@ -54,14 +54,17 @@ axios.post('/Social',form)
 }
 
   return (
-    <div>
-        <form className="Form" onSubmit={HandleSubmit}>
+<div>
+    <div className="Back-Img">
+      <form className="Form" onSubmit={HandleSubmit}>
            <input type="text" placeholder="Title" value={form.title} onChange={e => setForm({...form,title:e.target.value})}/>
            <input type="text" placeholder="Message" value={form.message} onChange={e => setForm({...form,message: e.target.value})}/>
            <input type="text" placeholder="Creater" value={form.creater} onChange={e => setForm({...form,creater:e.target.value})}/>
            <button className="Submit">Submit</button>
-        </form>
+  </form>
         
+      </div>
+     
          <div className="Cards">
             {posts && posts.map(formPosts =>{
               return <div className="Card-Posts" key={formPosts.id}>
