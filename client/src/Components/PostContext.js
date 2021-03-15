@@ -7,6 +7,7 @@ const PostContextProvider = (props) =>{
        { title : '', 
         message: '', 
         creater: '', 
+        selectedFile: ''
        }
       );
  
