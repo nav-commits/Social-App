@@ -4,7 +4,9 @@ const socialSchema = mongoose.Schema({
    title: String,
    message: String,
    creater: String,
-   selectedFile: String,
+   selectedFile: {
+       type:String
+   },
    createdAt:{
        type: Date,
        default: Date.now
