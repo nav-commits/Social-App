@@ -5,6 +5,7 @@ import axios from "axios";
 import moment from 'moment';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import FileBase from 'react-file-base64';
 
 function Post() {
 const {form,setForm} = useContext(PostContext);
@@ -62,7 +63,7 @@ axios.post('/Social',form)
            <input type="text" placeholder="Message" value={form.message} onChange={e => setForm({...form,message: e.target.value})}/>
            <input type="text" placeholder="Creater" value={form.creater} onChange={e => setForm({...form,creater:e.target.value})}/>
            <div>
-             <input type="file" onChange={e => setForm({...form,selectedFile:e.target.value})} />
+             <FileBase multiple={false} type="file" onDone={({base64}) => setForm({...form, selectedFile:base64})} />
            </div>
            <button className="Submit">Submit</button>
   </form>
@@ -72,7 +73,7 @@ axios.post('/Social',form)
          <div className="Cards">
             {posts && posts.map(formPosts =>{
               return <div className="Card-Posts" key={formPosts.id}>
-                        <img src={formPosts.selectedFile} alt="newpic"/>
+                        <img className="Post-Image" src={formPosts.selectedFile} alt='postspics'/>
                          <h1>Title:  {formPosts.title}</h1>
                          <p>Message: {formPosts.message}</p>
                          <p>Creater: {formPosts.creater}</p>

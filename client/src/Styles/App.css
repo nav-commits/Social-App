@@ -111,4 +111,8 @@ grid-gap: 0.2rem;
       text-align: center;
   }
 
-  
+
+  .Post-Image{
+      height: 120px;
+
+  }
