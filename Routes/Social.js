@@ -76,7 +76,7 @@ router.patch('/:id',async(req,res)=>{
         {$set:{title: req.body.title, 
         message: req.body.message ,
         creater:req.body.creater,
-        selectedFile: req.body.selectedFile
+        selectedFile: req.body.selectedFile,
         }});
         res.json(updatesocialPost);
     }

@@ -35,7 +35,7 @@ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .Cards{
-margin-top: 40px;
+margin-top: 80px;
 margin-left: 20px;
 padding-top: 10px;
 display: grid;
@@ -113,6 +113,9 @@ grid-gap: 0.2rem;
 
 
   .Post-Image{
-      height: 120px;
+      height: 200px;
+      padding-left: 0px;
+      padding-right: 0px;
+      width: 370px;
 
   }

@@ -5,7 +5,7 @@ import axios from "axios";
 import moment from 'moment';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import FileBase from 'react-file-base64';
+import FileBase64 from 'react-file-base64'
 
 function Post() {
 const {form,setForm} = useContext(PostContext);
@@ -63,7 +63,7 @@ axios.post('/Social',form)
            <input type="text" placeholder="Message" value={form.message} onChange={e => setForm({...form,message: e.target.value})}/>
            <input type="text" placeholder="Creater" value={form.creater} onChange={e => setForm({...form,creater:e.target.value})}/>
            <div>
-             <FileBase multiple={false} type="file" onDone={({base64}) => setForm({...form, selectedFile:base64})} />
+               <FileBase64 multiple={false} type="file" onDone={({base64}) => setForm({...form, selectedFile : base64})} />
            </div>
            <button className="Submit">Submit</button>
   </form>
