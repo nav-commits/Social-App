@@ -1,17 +1,22 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
-/* Styling for Header*/
-.header-wrapper{
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
     background-color: rgb(12, 35, 61);
     height: 150px;
 }
-.header{
-    color:rgb(214, 213, 213);
-    text-align: left;
-    padding-top: 50px;
-     margin: 0;
-     padding-left: 20px;
+
+.Nav-Links{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
 }
 
 body{

@@ -1,15 +1,17 @@
 import "../Styles/App.css";
 
-
-
 function Header() {
   return (
-  <div className="header-wrapper">
+  <nav className="header-wrapper">
         <div>
-           <h1 className="header">TheSocialPosts 365</h1>
+           <h1>TheSocialPosts 365</h1>
         </div>
+        <ul className="Nav-Links">
+            <li>Home</li>
+            <li>Posts</li>
+        </ul>
         
-</div>
+</nav>
   );
 }
 
