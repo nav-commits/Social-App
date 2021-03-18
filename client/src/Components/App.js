@@ -2,7 +2,7 @@ import Header from "../Components/Header";
 import "../Styles/App.css";
 import Post from "../Components/Post.jsx"
 import Footer from "../Components/Footer.jsx"
-import {BrowserRouter as Router,Switch,Route} from 'react-dom';
+import { BrowserRouter as Router, Route,Switch } from 'react-router-dom';
 import Home from '../Components/Home';
 
 
