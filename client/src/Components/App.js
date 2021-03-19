@@ -2,13 +2,14 @@ import Navbar from "../Components/Navbar";
 import "../Styles/App.css";
 import Post from "../Components/Post.jsx"
 import Footer from "../Components/Footer.jsx"
-import  {BrowserRouter as Router } from 'react-dom';
-import Home from '../Components/Home';
-import { Switch,Route } from "react-router";
+import  Router  from 'react-dom';
+import  Home from '../Components/Home';
+import  Switch  from 'react-dom';
+import  Route  from 'react-dom';
 
 function App() {
   return ( 
-  <Router>
+   <Router>
         <div>
          <Navbar/>
          <Switch>
@@ -17,7 +18,7 @@ function App() {
          </Switch>
          <Footer/>
       </div>
-  </Router>
+   </Router> 
    
   );
 }

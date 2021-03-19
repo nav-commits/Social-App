@@ -1,11 +1,13 @@
-import {useContext,useState,useEffect} from 'react';
+import {useContext} from 'react';
+import {useEffect} from 'react';
+import {useState} from 'react';
 import "../Styles/App.css";
 import {PostContext} from './PostContext';
 import axios from "axios";
 import moment from 'moment';
-import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import FileBase64 from 'react-file-base64'
+import {faTrashAlt}  from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon}  from '@fortawesome/react-fontawesome';
+import FileBase64 from 'react-file-base64';
 
 function Post() {
 const {form,setForm} = useContext(PostContext);
