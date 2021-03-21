@@ -8,6 +8,7 @@ import moment from 'moment';
 import {faTrashAlt}  from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon}  from '@fortawesome/react-fontawesome';
 import FileBase64 from 'react-file-base64';
+import  {Link } from 'react-router-dom';
 
 function Post() {
 const {form,setForm} = useContext(PostContext);
@@ -76,7 +77,7 @@ axios.post('/Social',form)
             {posts && posts.map(formPosts =>{
               return <div className="Card-Posts" key={formPosts.id}>
                         <img className="Post-Image" src={formPosts.selectedFile} alt='postspics'/>
-                         <h1>Title:  {formPosts.title}</h1>
+                        <Link to={`/post/${formPosts._id}`} className="Title-Link"> <h1>Title:  {formPosts.title}</h1></Link>   
                          <p>Message: {formPosts.message}</p>
                          <p>Creater: {formPosts.creater}</p>
                          <p>Posted: {moment(formPosts.createdAt).format('LLLL')}</p>

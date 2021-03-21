@@ -5,6 +5,7 @@ import Footer from "../Components/Footer.jsx"
 import { Switch, Route } from "react-router-dom";
 import  Main from '../Components/Main';
 import React from 'react';
+import PostDetail from '../Components/PostDetail.jsx'
 
 
 function App() {
@@ -14,10 +15,11 @@ function App() {
          <Header/>
          <Switch>
              <Route path="/" exact component={Main}/>
-               <Route path="/post">
+               <Route  exact path="/post">
                    <Post/>
                    <Footer/>
                </Route> 
+               <Route path="/post/:id" component={PostDetail}/>
          </Switch>
     </div> 
    
