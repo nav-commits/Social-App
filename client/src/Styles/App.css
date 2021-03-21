@@ -176,3 +176,26 @@ grid-gap: 0.2rem;
   .Title-Detail{
       text-align: center;
   }
+
+  .Back-Image{
+      width: 350px;
+      height: 220px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+  }
+
+  .Go-Back{
+    margin-top: 15px;
+    margin-left: 25px;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 18px;
+    padding-right: 30px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(12, 35, 61);
+    color: white;
+  }

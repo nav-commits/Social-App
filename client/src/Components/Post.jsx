@@ -84,7 +84,8 @@ axios.post('/Social',form)
                         <h1 className="title" onClick={()=>{
                           history.push(`/post/${formPosts._id}`,
                           {title: formPosts.title,
-                           creater: formPosts.creater
+                           creater: formPosts.creater,
+                           Picture: formPosts.selectedFile
                          });
                         }}>Title:{formPosts.title}</h1> 
                          <p>Message: {formPosts.message}</p>

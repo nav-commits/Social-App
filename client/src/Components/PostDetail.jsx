@@ -15,11 +15,11 @@ const location = useLocation();
 
   return (
    <div>
-       <button onClick={Handleclick}>Go Back</button>
-       <h1>Welcome details</h1>
+       <button className="Go-Back" onClick={Handleclick}>Go Back</button>
        <div>
-           <h2 className="Title-Detail"> Title:{location.state.title}</h2>
+           <h1 className="Title-Detail"> Title:{location.state.title}</h1>
            <h2 className="Creater-Detail"> Creater:{location.state.creater}</h2>
+           <img className="Back-Image" src={location.state.Picture} alt="background"/>
        </div>
     
    </div>
