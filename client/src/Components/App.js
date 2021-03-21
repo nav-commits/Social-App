@@ -1,24 +1,24 @@
-import Navbar from "../Components/Navbar";
+import Header from '../Components/Header.jsx';
 import "../Styles/App.css";
 import Post from "../Components/Post.jsx"
 import Footer from "../Components/Footer.jsx"
-import  Router  from 'react-dom';
-import  Home from '../Components/Home';
-import  Switch  from 'react-dom';
-import  Route  from 'react-dom';
+import { Switch, Route } from "react-router-dom";
+import  Main from '../Components/Main';
+import React from 'react';
+
 
 function App() {
   return ( 
-   <Router>
-        <div>
-         <Navbar/>
+   
+    <div> 
+         <Header/>
          <Switch>
-             <Route path="/" exact component={Home}/>
+             <Route path="/" exact component={Main}/>
              <Route path="/post" component={Post} /> 
          </Switch>
          <Footer/>
-      </div>
-   </Router> 
+    </div> 
+   
    
   );
 }

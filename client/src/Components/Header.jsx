@@ -1,7 +1,9 @@
 import "../Styles/App.css";
-import  Link  from 'react-dom';
+import  {Link } from 'react-dom';
+import React from 'react';
 
-function Navbar() {
+function Header() {
+     
   return (
   <div>
        <nav className="header-wrapper">
@@ -25,4 +27,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Header;

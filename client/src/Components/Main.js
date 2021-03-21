@@ -1,6 +1,6 @@
 import "../Styles/App.css";
 
-function Home() {
+function Main() {
   return (
    <div>
        <h1>Welcome to Posts</h1>
@@ -8,4 +8,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Main;
