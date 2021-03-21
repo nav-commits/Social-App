@@ -16,7 +16,11 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.Link{
     list-style: none;
+    color: white;  
 }
 
 body{
@@ -131,9 +135,14 @@ grid-gap: 0.2rem;
     background-color: rgb(12, 35, 61);
     height: 180px;
     color: white;
+ 
     position: relative;
-  }
 
+    /* margin-top: -50px; */
+     width:100%;
+    
+  }
+ 
 .Footer-content{
     position: absolute;
     left:1100px;
@@ -144,4 +153,4 @@ grid-gap: 0.2rem;
     position: absolute;
     left:1180px;
     top:140px;
-}
+} 
