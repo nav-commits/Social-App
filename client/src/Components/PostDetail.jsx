@@ -18,8 +18,8 @@ const location = useLocation();
        <button onClick={Handleclick}>Go Back</button>
        <h1>Welcome details</h1>
        <div>
-           <h2 className="Title-Detail">{location.state.title}</h2>
-           <p className="Creater-Detail">{location.state.creater}</p>
+           <h2 className="Title-Detail"> Title:{location.state.title}</h2>
+           <h2 className="Creater-Detail"> Creater:{location.state.creater}</h2>
        </div>
     
    </div>
