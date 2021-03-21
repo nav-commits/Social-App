@@ -77,7 +77,7 @@ axios.post('/Social',form)
             {posts && posts.map(formPosts =>{
               return <div className="Card-Posts" key={formPosts.id}>
                         <img className="Post-Image" src={formPosts.selectedFile} alt='postspics'/>
-                        <Link to={`/post/${formPosts._id}`} className="Title-Link"> <h1>Title:  {formPosts.title}</h1></Link>   
+                        <Link to={`/post/${formPosts._id}`} className="Title-Link"> <h1>Title:{formPosts.title}</h1></Link>   
                          <p>Message: {formPosts.message}</p>
                          <p>Creater: {formPosts.creater}</p>
                          <p>Posted: {moment(formPosts.createdAt).format('LLLL')}</p>
@@ -90,3 +90,4 @@ axios.post('/Social',form)
 }
 
 export default Post;
+

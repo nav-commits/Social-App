@@ -15,7 +15,7 @@ function App() {
          <Header/>
          <Switch>
              <Route path="/" exact component={Main}/>
-               <Route  exact path="/post">
+               <Route exact path="/post">
                    <Post/>
                    <Footer/>
                </Route> 

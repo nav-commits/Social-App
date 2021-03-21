@@ -58,6 +58,10 @@ grid-gap: 0.2rem;
    text-align: right;
 }
 
+.Title-Link{
+    list-style: none;
+    color: rgb(12, 35, 61);
+}
 
 
 /* Styling form */
