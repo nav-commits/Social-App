@@ -14,9 +14,11 @@ function App() {
          <Header/>
          <Switch>
              <Route path="/" exact component={Main}/>
-             <Route path="/post" component={Post} /> 
+               <Route path="/post">
+                   <Post/>
+                   <Footer/>
+               </Route> 
          </Switch>
-         <Footer/>
     </div> 
    
    
