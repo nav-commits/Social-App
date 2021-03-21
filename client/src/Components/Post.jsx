@@ -8,7 +8,6 @@ import moment from 'moment';
 import {faTrashAlt}  from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon}  from '@fortawesome/react-fontawesome';
 import FileBase64 from 'react-file-base64';
-// import  {Link } from 'react-router-dom';
 import {useHistory} from 'react-router-dom';
 
 function Post() {
@@ -82,7 +81,7 @@ axios.post('/Social',form)
             {posts && posts.map(formPosts =>{
               return <div className="Card-Posts" key={formPosts.id}>
                         <img className="Post-Image" src={formPosts.selectedFile} alt='postspics'/>
-                        <h1 onClick={()=>{
+                        <h1 className="title" onClick={()=>{
                           history.push(`/post/${formPosts._id}`,
                           {title: formPosts.title,
                            creater: formPosts.creater
@@ -101,4 +100,3 @@ axios.post('/Social',form)
 
 export default Post;
 
-// to={`/post/${formPosts._id}`} 

@@ -11,12 +11,17 @@ const location = useLocation();
 
   
 
+// going to make fetch call here for update api
+
   return (
    <div>
        <button onClick={Handleclick}>Go Back</button>
        <h1>Welcome details</h1>
-       <h2>{location.state.title}</h2>
-       <p>{location.state.creater}</p>
+       <div>
+           <h2 className="Title-Detail">{location.state.title}</h2>
+           <p className="Creater-Detail">{location.state.creater}</p>
+       </div>
+    
    </div>
   );
 }

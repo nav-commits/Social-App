@@ -43,6 +43,9 @@ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
 }
 
+.title{
+    cursor: pointer;
+}
 .Cards{
 margin-top: 80px;
 margin-left: 20px;
@@ -163,3 +166,13 @@ grid-gap: 0.2rem;
     text-align: center;
     padding-top: 40px;
 }
+
+
+  /* Styling Detail Page */
+  .Creater-Detail{
+      text-align: center;
+  }
+
+  .Title-Detail{
+      text-align: center;
+  }
