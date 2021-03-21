@@ -151,3 +151,11 @@ grid-gap: 0.2rem;
     left:1180px;
     top:140px;
 } 
+
+
+/* Styling Main */
+
+.Main-Posts{
+    text-align: center;
+    padding-top: 40px;
+}
