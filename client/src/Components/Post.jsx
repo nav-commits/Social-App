@@ -8,11 +8,13 @@ import moment from 'moment';
 import {faTrashAlt}  from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon}  from '@fortawesome/react-fontawesome';
 import FileBase64 from 'react-file-base64';
-import  {Link } from 'react-router-dom';
+// import  {Link } from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 
 function Post() {
 const {form,setForm} = useContext(PostContext);
 const [posts,setPosts] = useState([])
+const history = useHistory();
 
 useEffect(() => {
   fetchPosts();
@@ -57,6 +59,9 @@ axios.post('/Social',form)
     fetchPosts();
 }
 
+
+
+
   return (
 <div>
     <div className="Back-Img">
@@ -77,7 +82,12 @@ axios.post('/Social',form)
             {posts && posts.map(formPosts =>{
               return <div className="Card-Posts" key={formPosts.id}>
                         <img className="Post-Image" src={formPosts.selectedFile} alt='postspics'/>
-                        <Link to={`/post/${formPosts._id}`} className="Title-Link"> <h1>Title:{formPosts.title}</h1></Link>   
+                        <h1 onClick={()=>{
+                          history.push(`/post/${formPosts._id}`,
+                          {title: formPosts.title,
+                           creater: formPosts.creater
+                         });
+                        }}>Title:{formPosts.title}</h1> 
                          <p>Message: {formPosts.message}</p>
                          <p>Creater: {formPosts.creater}</p>
                          <p>Posted: {moment(formPosts.createdAt).format('LLLL')}</p>
@@ -91,3 +101,4 @@ axios.post('/Social',form)
 
 export default Post;
 
+// to={`/post/${formPosts._id}`} 
