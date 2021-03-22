@@ -68,6 +68,19 @@ grid-gap: 0.2rem;
     color: rgb(12, 35, 61);
 }
 
+.Edit{
+   cursor: pointer;
+   position: relative;
+   top: 0px;
+   right: -320px;
+
+}
+
+.Edit-Link{
+    list-style: none;
+    color: rgb(12, 35, 61);
+}
+
 
 /* Styling form */
 .Submit{
@@ -201,4 +214,37 @@ grid-gap: 0.2rem;
     border: none;
     background-color: rgb(12, 35, 61);
     color: white;
+  }
+
+
+  /* Styling Edit Page */
+  .Edit-Save{
+    margin-top: 15px;
+    margin-left: 25px;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 18px;
+    padding-right: 30px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(12, 35, 61);
+    color: white;
+  }
+
+
+  .Edit-Form{
+    border-radius: 5px;
+    margin-left: 420px;
+    margin-right: 420px;
+    padding-bottom: 60px;
+    padding-right: 50px;
+    padding-left: 10px;
+    padding-top: 10px; 
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    left: 110px;
+    margin-top: 20px;
+   
   }

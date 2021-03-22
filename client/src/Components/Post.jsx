@@ -7,8 +7,11 @@ import axios from "axios";
 import moment from 'moment';
 import {faTrashAlt}  from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon}  from '@fortawesome/react-fontawesome';
+import {faEdit}  from '@fortawesome/free-solid-svg-icons';
 import FileBase64 from 'react-file-base64';
 import {useHistory} from 'react-router-dom';
+import {Link} from 'react-router-dom';
+
 
 function Post() {
 const {form,setForm} = useContext(PostContext);
@@ -92,6 +95,7 @@ axios.post('/Social',form)
                          <p>Creater: {formPosts.creater}</p>
                          <p>Posted: {moment(formPosts.createdAt).format('LLLL')}</p>
                         <FontAwesomeIcon  onClick={()=>deletePosts(formPosts._id)} className="Trash" icon={faTrashAlt} />
+                       <Link className="Edit-Link" to={`/post/Edit/${formPosts._id}`}><FontAwesomeIcon className="Edit" icon={faEdit}/></Link> 
                     </div>
             })}
         </div>

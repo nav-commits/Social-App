@@ -7,6 +7,7 @@ import  Main from '../Components/Main';
 import React from 'react';
 import PostDetail from '../Components/PostDetail.jsx'
 import Contact from '../Components/Contact.jsx'
+import Edit from '../Components/Edit.jsx'
 
 function App() {
   return ( 
@@ -19,8 +20,9 @@ function App() {
                    <Post/>
                    <Footer/>
                </Route> 
-               <Route path="/post/:id" component={PostDetail}/>
+               <Route exact path="/post/:id" component={PostDetail}/>
               <Route path="/Contact" component={Contact}/>
+              <Route path="/post/Edit/:id" component={Edit}/>
          </Switch>
     </div> 
    

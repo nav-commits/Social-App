@@ -9,10 +9,6 @@ const Handleclick = () => {
        }
 const location = useLocation();
 
-  
-
-// going to make fetch call here for update api
-
   return (
    <div>
        <button className="Go-Back" onClick={Handleclick}>Go Back</button>
