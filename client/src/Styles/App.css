@@ -12,15 +12,17 @@ nav{
 }
 
 .Nav-Links{
-    width: 15%;
+    width: 18%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-size: 18px;
 }
 
 .Link{
     list-style: none;
     color: white;  
+    text-decoration: none;
 }
 
 body{
@@ -165,6 +167,7 @@ grid-gap: 0.2rem;
 .Main-Posts{
     text-align: center;
     padding-top: 40px;
+    text-decoration: underline;
 }
 
 
@@ -178,8 +181,8 @@ grid-gap: 0.2rem;
   }
 
   .Back-Image{
-      width: 350px;
-      height: 220px;
+      width: 500px;
+      height: 290px;
       margin-left: auto;
       margin-right: auto;
       display: block;

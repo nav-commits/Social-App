@@ -6,7 +6,7 @@ import { Switch, Route } from "react-router-dom";
 import  Main from '../Components/Main';
 import React from 'react';
 import PostDetail from '../Components/PostDetail.jsx'
-
+import Contact from '../Components/Contact.jsx'
 
 function App() {
   return ( 
@@ -20,6 +20,7 @@ function App() {
                    <Footer/>
                </Route> 
                <Route path="/post/:id" component={PostDetail}/>
+              <Route path="/Contact" component={Contact}/>
          </Switch>
     </div> 
    

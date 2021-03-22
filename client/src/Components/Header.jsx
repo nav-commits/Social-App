@@ -19,7 +19,9 @@ function Header() {
              <Link className="Link" to="/post">
                   <li>Posts</li>
             </Link>
-           
+            <Link className="Link" to="/Contact">
+                  <li>Contact</li>
+            </Link>
         </ul>   
       </nav>
   </div>
