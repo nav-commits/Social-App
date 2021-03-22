@@ -40,7 +40,7 @@ const HandleSubmit = (event) =>{
            <div>
                <FileBase64 multiple={false} type="file" onDone={({base64}) => setForm({...form, selectedFile : base64})} />
            </div>
-           <button className="Edit-Save">Save</button>
+           <button className="Edit-Save">Update</button>
       </form>
 </div>
   );
