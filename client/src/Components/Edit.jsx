@@ -4,9 +4,13 @@ import {useContext} from 'react';
 import axios from "axios";
 import FileBase64 from 'react-file-base64';
 import {useHistory} from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 
 function Edit() {
 const history = useHistory();
+const location = useLocation();
+console.log(location.state.id);
+
 const Handleclick = () => {
     history.push('/post');
 }
@@ -14,10 +18,11 @@ const {form,setForm} = useContext(PostContext);
 
 const HandleSubmit = (event) =>{
     event.preventDefault();
-    axios.update('/Social',form)
+    axios.update(`/Social/${location.state.id}`,form)
       .then((response)=>{
       console.log(response)
       console.log(form);
+      
       setForm('');
       })
       .catch((error)=>{
