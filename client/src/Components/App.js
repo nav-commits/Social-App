@@ -6,32 +6,11 @@ import { Switch, Route } from "react-router-dom";
 import  Main from '../Components/Main';
 import React from 'react';
 import PostDetail from '../Components/PostDetail.jsx'
-import Contact from '../Components/Contact.jsx'
 import Edit from '../Components/Edit.jsx'
-import {useState} from 'react';
-import fire from '../Components/Fire.js';
-import {useEffect} from 'react';
+
 
 function App() {
-const [users,setUsers] = useState({})
- console.log(users)
-useEffect(() => {
-  authListener();
-  },[]);
-
-const authListener = () => {
-  fire.auth().onAuthStateChanged(users => {
-      console.log(users);
-      if (users) {
-        setUsers(users);
-      } else {
-        setUsers({ users: null });
-      }
-    });
-}
-
-  return ( 
-   
+  return (   
     <div> 
          <Header/>
          <Switch>
@@ -41,7 +20,6 @@ const authListener = () => {
                    <Footer/>
                </Route> 
                <Route exact path="/post/:id" component={PostDetail}/>
-              <Route path="/Contact" component={Contact}/>
               <Route path="/post/Edit/:id" component={Edit}/>
          </Switch>
     </div> 
