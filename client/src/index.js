@@ -7,9 +7,7 @@ import { BrowserRouter as Router} from "react-router-dom";
 ReactDOM.render(
     <Router>
         <PostContextProvider> 
-            {/* <React.StrictMode> */}
                  <App />
-            {/* </React.StrictMode> */}
        </PostContextProvider>
     </Router>
      
