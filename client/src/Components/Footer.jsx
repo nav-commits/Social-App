@@ -1,7 +1,5 @@
 import "../Styles/App.css";
 
-
-
 function Footer() {
   return (
   <div>
