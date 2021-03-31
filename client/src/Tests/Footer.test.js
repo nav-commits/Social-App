@@ -4,9 +4,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 test('should render footer component', () =>{
-   const component = render(<Footer/>);
-   const footer = component.getByTestId('footer-example');   
+   const {getByTestId} = render(<Footer/>);
+   const footer = getByTestId('footer-example');   
    expect(footer).toBeInTheDocument();
 })
-
-// ('footer-example');
