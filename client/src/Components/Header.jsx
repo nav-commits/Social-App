@@ -2,8 +2,7 @@ import "../Styles/App.css";
 import  {Link } from 'react-router-dom';
 import React from 'react';
 
-function Header() {
-     
+function Header() {  
   return (
   <div>
        <nav className="header-wrapper">
