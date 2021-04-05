@@ -8,3 +8,4 @@ test('should render footer component', () =>{
    const footer = getByTestId('footer-example');   
    expect(footer).toBeInTheDocument();
 })
+
