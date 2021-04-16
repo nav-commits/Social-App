@@ -1,6 +1,6 @@
 import "../Styles/App.css";
 
-function Main() {
+const Main = () => {
   return (
    <div>
        <h1 className="Main-Posts">Welcome to TheBlogPost 365</h1>

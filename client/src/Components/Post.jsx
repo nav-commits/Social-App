@@ -11,7 +11,7 @@ import {faEdit}  from '@fortawesome/free-solid-svg-icons';
 import FileBase64 from 'react-file-base64';
 import {useHistory} from 'react-router-dom';
 
-function Post() {
+const Post = () => {
 const {form,setForm} = useContext(PostContext);
 const [posts,setPosts] = useState([])
 const history = useHistory();
