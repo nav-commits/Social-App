@@ -8,7 +8,7 @@ const Handleclick = () => {
         history.push('/post');
        }
 const location = useLocation();
-console.log(location)
+console.log(location);
   return (
    <div>
        <button className="Go-Back" onClick={Handleclick}>Go Back</button>
