@@ -2,13 +2,13 @@ import "../Styles/App.css";
 import {useHistory} from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
 
-function PostDetail() {
+const PostDetail = () => {
 const history = useHistory();
 const Handleclick = () => {
-        history.push('/post');
-       }
+history.push('/post');
+}
 const location = useLocation();
-console.log(location)
+
   return (
    <div>
        <button className="Go-Back" onClick={Handleclick}>Go Back</button>

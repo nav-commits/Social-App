@@ -9,7 +9,7 @@ import PostDetail from '../Components/PostDetail.jsx'
 import Edit from '../Components/Edit.jsx'
 
 
-function App() {
+const App = () => {
   return (   
     <div> 
          <Header/>
