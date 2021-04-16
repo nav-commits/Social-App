@@ -4,11 +4,12 @@ import {useLocation} from 'react-router-dom';
 
 function PostDetail() {
 const history = useHistory();
-const Handleclick = () => {
-        history.push('/post');
-       }
+const Handleclick = () => 
+  {
+    history.push('/post');
+  }
 const location = useLocation();
-console.log(location);
+
   return (
    <div>
        <button className="Go-Back" onClick={Handleclick}>Go Back</button>
