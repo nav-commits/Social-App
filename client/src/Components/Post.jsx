@@ -63,7 +63,6 @@ const Handleclick = (id) => {
   history.push(`/post/Edit/${id}`,
   {id: id
  });
- console.log(id)
  }
 
 
